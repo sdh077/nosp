@@ -31,11 +31,11 @@
 						<span
 							class="sidebar-icon size-40 d-flex align-items-center justify-content-center fs-4 lh-1 text-white rounded-3 bg-gradient-primary fw-bolder"
 						>
-							A
+							NO
 						</span>
 						<span class="sidebar-text">
 							<!--Sidebar-text-->
-							<span class="sidebar-text text-truncate fs-3 fw-bold"> Assan </span>
+							<span class="sidebar-text text-truncate fs-3 fw-bold"> spoiler </span>
 						</span>
 					</div>
 				</a>
