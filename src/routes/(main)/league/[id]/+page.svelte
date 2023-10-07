@@ -2,8 +2,18 @@
 	import { goto } from '$app/navigation';
 	import moment from 'moment-timezone';
 	export let data;
+	const imgs = {
+		'4489e30a-f493-49f0-9ab7-2c31fe4703db': '/imgs/lolcup1.jpeg',
+		'47b5300c-f2b9-4287-b4e2-bdfe55aec085': '/imgs/lolcup2.jpeg',
+		'e03dee23-9ab1-4923-bbcf-8b2a87155169': '/imgs/lolcup3.jpeg'
+	};
 </script>
 
+{#if imgs[data.id]}
+	<div class="pt-3 px-3 px-lg-6">
+		<img src={imgs[data.id]} class="w-100" alt="" />
+	</div>
+{/if}
 <div class="content pt-3 px-3 px-lg-6 d-flex flex-column-fluid">
 	<div class="container-fluid px-0">
 		<div class="row">
@@ -17,14 +27,23 @@
 										{#each data.matches as match}
 											<tr class="align-middle">
 												<td class="text-reset">
-													{moment.tz(match.play_date, 'Asia/Seoul').format('YYYY-MM-DD')}
+													{moment.tz(match.playDate, 'Asia/Seoul').format('YYYY-MM-DD')}
 												</td>
 												<td>
 													<h5 class="mb-1">{match.title}</h5>
 												</td>
-												<td class="text-reset">{match.teams}</td>
-												<td class="text-reset" on:click={() => goto(`/match/${match.match_id}`)}>
-													<button>입장</button>
+												<td class="text-reset">
+													{#if match.showTeam}
+														{match.team}
+													{:else}
+														<button
+															class="btn btn-sm btn-secondary"
+															on:click={() => (match['showTeam'] = true)}>팀 보기</button
+														>
+													{/if}
+												</td>
+												<td class="text-reset" on:click={() => goto(`/match/${match.matchId}`)}>
+													<button class="btn btn-primary">입장</button>
 												</td>
 											</tr>
 										{/each}

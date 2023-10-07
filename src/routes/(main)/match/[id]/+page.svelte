@@ -3,7 +3,7 @@
 
 	export let data;
 	let match = data.match;
-	let games = data.games;
+	let games = data.games ?? [];
 	let game = games.length ? games[0] : {};
 </script>
 
@@ -60,7 +60,7 @@
 								<Youtube id={game.link} altThumb={true}>
 									<div slot="thumbnail">스포방지</div>
 								</Youtube>
-							{:else}
+							{:else if game.link}
 								<iframe
 									id="afreecatv_player_video"
 									title={game.title}

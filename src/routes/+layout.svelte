@@ -22,5 +22,6 @@
 		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
 		rel="stylesheet"
 	/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.css" />
 </svelte:head>
 <slot />

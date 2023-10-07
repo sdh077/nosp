@@ -11,8 +11,25 @@
 <body>
 	<div class="d-flex flex-column flex-root">
 		<div class="page d-flex flex-row flex-column-fluid">
-			<Side on:close={closeSide} {showSideBar} navs={data.leagues} />
+			<Side on:close={closeSide} {showSideBar} navs={data.leagues ?? []} />
+
 			<main class="page-content d-flex flex-column flex-row-fluid">
+				<header
+					class="navbar mb-3 px-3 px-lg-6 px-3 px-lg-6 align-items-center page-header navbar-expand navbar-light"
+				>
+					<ul class="navbar-nav ms-auto d-flex align-items-center h-100">
+						<li
+							class="nav-item dropdown ms-3 d-flex d-lg-none align-items-center justify-content-center flex-column h-100"
+						>
+							<button
+								on:click={closeSide}
+								class="btn nav-link sidebar-trigger-lg-down size-40 p-0 d-flex align-items-center justify-content-center"
+							>
+								<span class="material-symbols-rounded align-middle">menu</span>
+							</button>
+						</li>
+					</ul>
+				</header>
 				<slot />
 				<Footer />
 			</main>
