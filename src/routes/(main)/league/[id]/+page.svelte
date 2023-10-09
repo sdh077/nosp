@@ -3,7 +3,7 @@
 	import moment from 'moment-timezone';
 	export let data;
 	const imgs = {
-		'4489e30a-f493-49f0-9ab7-2c31fe4703db': '/imgs/lolcup1.jpeg',
+		'4489e30a-f493-49f0-9ab7-2c31fe4703db': '/imgs/lolcup1.png',
 		'47b5300c-f2b9-4287-b4e2-bdfe55aec085': '/imgs/lolcup2.jpeg',
 		'e03dee23-9ab1-4923-bbcf-8b2a87155169': '/imgs/lolcup3.jpeg'
 	};
