@@ -8,7 +8,7 @@ export const load = (async ({ cookies, fetch, params }) => {
         }
     })
         .then(async (data) => await data.json())
-        .then(res => res.data)
+        .then(res => res.data.filter(item => item.useYn).sort((a, b) => a.order > b.order ? -1 : 1))
         .catch((e) => console.log('e1', e));
     return {
         matches,

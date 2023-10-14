@@ -27,15 +27,11 @@
 			>
 				<a href="/" class="d-block">
 					<div class="d-flex align-items-center flex-no-wrap text-truncate">
-						<!--Logo-icon-->
-						<span
-							class="sidebar-icon size-40 d-flex align-items-center justify-content-center fs-4 lh-1 text-white rounded-3 bg-gradient-primary fw-bolder mx-0"
-						>
-							R
-						</span>
 						<span class="sidebar-text">
 							<!--Sidebar-text-->
-							<span class="sidebar-text text-truncate fs-3 fw-bold"> ushRumble </span>
+							<span class="sidebar-text text-truncate fs-3 fw-bold">
+								RushRumble<i class="fa-solid fa-circle-dot" />
+							</span>
 						</span>
 					</div>
 				</a>

@@ -16,7 +16,9 @@ export const load = (async ({ cookies, fetch, url, params }) => {
         }
     })
         .then(async (data) => await data.json())
-        .then(res => res.data)
+        .then(res => res.data
+            .sort((a, b) => a.order > b.order ? -1 : 1)
+            .sort((a, b) => a.type > b.type ? 1 : -1))
         .catch((e) => []);
     return {
         match,

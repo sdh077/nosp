@@ -3,12 +3,8 @@
 	import { Calendar } from 'fullcalendar';
 	import { goto } from '$app/navigation';
 	export let matches;
-	console.log(matches);
 	let calendarEl;
 	onMount(async () => {
-		const currentMonth = ('0' + (new Date().getMonth() + 1)).slice(-2);
-		const currentYear = new Date().getFullYear();
-
 		let calendar = new Calendar(calendarEl, {
 			headerToolbar: {},
 			// themeSystem: 'bootstrap',
