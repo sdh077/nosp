@@ -22,6 +22,6 @@ export const load = (async ({ cookies, fetch, url, params }) => {
         .catch((e) => []);
     return {
         match,
-        games
+        games,
     };
 }) satisfies PageServerLoad;

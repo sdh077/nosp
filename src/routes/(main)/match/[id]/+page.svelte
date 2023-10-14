@@ -1,10 +1,16 @@
 <script>
+	import { onMount } from 'svelte';
+	import { title } from '$lib/components/store';
 	import Youtube from '$lib/svelte-youtube-embed';
 
 	export let data;
 	let match = data.match;
 	let games = data.games ?? [];
 	let game = games[0] ?? {};
+	onMount(() => {
+		title.set(match.team);
+		return () => title.set('');
+	});
 </script>
 
 <div class="content d-flex flex-column-fluid">
