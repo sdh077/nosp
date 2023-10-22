@@ -11,6 +11,10 @@
 		title.set(match.team);
 		return () => title.set('');
 	});
+
+	const fullVideo = games
+		.filter((game) => game.type === 2)
+		.sort((a, b) => (a.order < b.order ? -1 : 1));
 </script>
 
 <div class="content d-flex flex-column-fluid">
@@ -31,27 +35,29 @@
 					</li>
 				{/each}
 			</ul>
-			풀영상
-			<ul class="nav mb-3 nav-tabs nav-overflow">
-				{#each games
-					.filter((game) => game.type === 2)
-					.sort((a, b) => (a.order < b.order ? -1 : 1)) as item, index}
-					<li class="nav-item">
-						<button
-							on:click={() => (game = item)}
-							class="nav-link {game.game_id === item.game_id ? 'active' : ''} "
-						>
-							{item.title}
-						</button>
-					</li>
-				{/each}
-			</ul>
+			{#if fullVideo.length}
+				풀영상
+				<ul class="nav mb-3 nav-tabs nav-overflow">
+					{#each fullVideo as item, index}
+						<li class="nav-item">
+							<button
+								on:click={() => (game = item)}
+								class="nav-link {game.game_id === item.game_id ? 'active' : ''} "
+							>
+								{item.title}
+							</button>
+						</li>
+					{/each}
+				</ul>
+			{/if}
 
 			<div class="row w-100">
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-body">
-							{#if game.type === 1}
+							{#if game.link === ''}
+								스포 방지
+							{:else if game.type === 1}
 								<Youtube id={game.link} altThumb={true}>
 									<div slot="thumbnail">스포방지</div>
 								</Youtube>
