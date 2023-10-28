@@ -33,16 +33,6 @@
 													<td>
 														<h5 class="mb-1">{match.title}</h5>
 													</td>
-													<td class="text-reset">
-														{#if match.showTeam}
-															{match.team}
-														{:else}
-															<button
-																class="btn btn-sm btn-secondary"
-																on:click={() => (match['showTeam'] = true)}>팀 보기</button
-															>
-														{/if}
-													</td>
 													<td class="text-reset" on:click={() => goto(`/match/${match.matchId}`)}>
 														<button class="btn btn-primary">입장</button>
 													</td>

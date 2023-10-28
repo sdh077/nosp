@@ -15,6 +15,7 @@
 	const fullVideo = games
 		.filter((game) => game.type === 2)
 		.sort((a, b) => (a.order < b.order ? -1 : 1));
+	console.log(games);
 </script>
 
 <div class="content d-flex flex-column-fluid">
@@ -28,7 +29,7 @@
 					<li class="nav-item">
 						<button
 							on:click={() => (game = item)}
-							class="nav-link {game.game_id === item.game_id ? 'active' : ''} "
+							class="nav-link {game.gameId === item.gameId ? 'active' : ''} "
 						>
 							{item.title}
 						</button>
@@ -42,7 +43,7 @@
 						<li class="nav-item">
 							<button
 								on:click={() => (game = item)}
-								class="nav-link {game.game_id === item.game_id ? 'active' : ''} "
+								class="nav-link {game.gameId === item.gameId ? 'active' : ''} "
 							>
 								{item.title}
 							</button>
@@ -55,7 +56,7 @@
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-body">
-							{#if game.link === ''}
+							{#if game.link.trim() === ''}
 								스포 방지
 							{:else if game.type === 1}
 								<Youtube id={game.link} altThumb={true}>
