@@ -15,7 +15,6 @@
 	const fullVideo = games
 		.filter((game) => game.type === 2)
 		.sort((a, b) => (a.order < b.order ? -1 : 1));
-	console.log(games);
 </script>
 
 <div class="content d-flex flex-column-fluid">

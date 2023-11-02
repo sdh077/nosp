@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { createEventDispatcher } from 'svelte';
 	import { clickOutside } from '$lib/utils/clickOutside';
+	import { title } from '$lib/components/store';
 	let ow: number;
 	$: {
 		if (ow) showSideBar = ow < 992;

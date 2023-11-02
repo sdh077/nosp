@@ -25,7 +25,7 @@
 				title: match.title,
 				start: match.playDate.slice(0, 10),
 				end: match.playDate.slice(0, 10),
-				className: 'bg-gradient-to-tl from-red-600 to-rose-400 cursor'
+				className: 'bg-white'
 			})),
 			eventClick: (arg) => goto(`/match/${arg.event.id}`)
 		});
@@ -37,9 +37,6 @@
 	<div
 		class="relative flex flex-col min-w-0 break-words bg-white border-0 dark:bg-gray-950 dark:shadow-soft-dark-xl shadow-soft-xl rounded-2xl bg-clip-border"
 	>
-		<!-- <div class="flex-auto p-4">
-			<div data-toggle="calendar" id="calendar" />
-		</div> -->
 		<div class="flex-auto p-4">
 			<div data-toggle="calendar" bind:this={calendarEl} />
 		</div>
