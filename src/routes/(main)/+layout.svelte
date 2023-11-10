@@ -20,19 +20,13 @@
 		<div class="page d-flex flex-row flex-column-fluid">
 			<Side on:close={closeSide} {showSideBar} navs={data.leagues ?? []} />
 			<main class="page-content d-flex flex-column flex-row-fluid">
-				<header
-					class="navbar mb-3 px-3 align-items-center page-header navbar-expand navbar-light"
-				>
+				<header class="navbar mb-3 px-3 align-items-center page-header navbar-expand navbar-light">
 					<div>
 						<ul class="navbar-nav d-flex align-items-center h-100">
 							<li
 								class="nav-item dropdown d-flex align-items-center justify-content-center flex-column h-100"
 							>
-								{#if headTitle}
-									{headTitle}
-								{:else}
-									<img src="/imgs/white_logo.png" alt="" class="w-50" />
-								{/if}
+								{headTitle}
 							</li>
 						</ul>
 					</div>
