@@ -31,7 +31,7 @@
 						<span class="sidebar-text">
 							<!--Sidebar-text-->
 							<span class="sidebar-text text-truncate fs-3 fw-bold">
-								RushRumble<i class="fa-solid fa-circle-dot" />
+								<img src="/imgs/white_logo.png" alt="" class="w-100"><i class="fa-solid fa-circle-dot" />
 							</span>
 						</span>
 					</div>
