@@ -14,7 +14,7 @@
 	});
 	const loginNaver = async () => {
 		const clientId = 'bRFlrYzGADivQSF_uTpM';
-		const callbackUrl = 'http://localhost:5174/nlogin';
+		const callbackUrl = 'https://www.rushrumble.com/nlogin';
 		const auth = await naver.login(clientId, callbackUrl);
 		console.log('auth', auth);
 	};
