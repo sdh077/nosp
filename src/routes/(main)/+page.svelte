@@ -5,7 +5,9 @@
 </script>
 
 <svelte:window bind:innerWidth />
-{#if innerWidth < 1032}
+{#if !innerWidth}
+	<div />
+{:else if innerWidth < 1032}
 	<div class="p-4 space-y-4">
 		{#each data.matches.sort((m1, m2) => (m1.playDate < m2.playDate ? 1 : -1)).slice(0, 5) as match}
 			<div class="border rounded-lg p-4 space-y-2">

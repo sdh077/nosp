@@ -30,7 +30,7 @@
   --bs-gray-700: #393c4e;
   --bs-gray-800: #2c2f41;
   --bs-gray-900: #232533;
-  --bs-primary: #581cff;
+  --bs-primary: #ffebb3;
   --bs-secondary: #8A8FA6;
   --bs-success: #10b981;
   --bs-info: #0061ff;
@@ -39,7 +39,7 @@
   --bs-light: #F3F5FF;
   --bs-white: #fff;
   --bs-dark: #232533;
-  --bs-primary-rgb: 88, 28, 255;
+  --bs-primary-rgb: #ffebb3;
   --bs-secondary-rgb: 138, 143, 166;
   --bs-success-rgb: 16, 185, 129;
   --bs-info-rgb: 0, 97, 255;
@@ -48,7 +48,7 @@
   --bs-light-rgb: 243, 245, 255;
   --bs-white-rgb: 255, 255, 255;
   --bs-dark-rgb: 35, 37, 51;
-  --bs-primary-text: #4616cc;
+  --bs-primary-text: #ffebb3;
   --bs-secondary-text: #5B6079;
   --bs-success-text: #0d9467;
   --bs-info-text: #003a99;
@@ -64,7 +64,7 @@
   --bs-danger-bg-subtle: #fdd9df;
   --bs-light-bg-subtle: #f9faff;
   --bs-dark-bg-subtle: #B4B8CA;
-  --bs-primary-border-subtle: #bca4ff;
+  --bs-primary-border-subtle: #fff2cf;
   --bs-secondary-border-subtle: #E3E6F2;
   --bs-success-border-subtle: #9fe3cd;
   --bs-info-border-subtle: #99c0ff;
@@ -145,7 +145,7 @@
   --bs-tertiary-bg: #2c2f41;
   --bs-tertiary-bg-rgb: 44, 47, 65;
   --bs-emphasis-color: #fff;
-  --bs-primary-text: #9b77ff;
+  --bs-primary-text: #ffebb3;
   --bs-secondary-text: #D9DCEA;
   --bs-success-text: #70d5b3;
   --bs-info-text: #66a0ff;
@@ -153,7 +153,7 @@
   --bs-danger-text: #f88c9e;
   --bs-light-text: #F3F5FF;
   --bs-dark-text: #D9DCEA;
-  --bs-primary-bg-subtle: #230b66;
+  --bs-primary-bg-subtle: #ffebb3;
   --bs-secondary-bg-subtle: #2c2f41;
   --bs-success-bg-subtle: #064a34;
   --bs-info-bg-subtle: #002766;
@@ -161,7 +161,7 @@
   --bs-danger-bg-subtle: #621926;
   --bs-light-bg-subtle: #2c2f41;
   --bs-dark-bg-subtle: #1b1d29;
-  --bs-primary-border-subtle: #351199;
+  --bs-primary-border-subtle: #ffebb3;
   --bs-secondary-border-subtle: #393c4e;
   --bs-success-border-subtle: #0a6f4d;
   --bs-info-border-subtle: #002766;
@@ -3399,6 +3399,106 @@ textarea.form-control-lg {
 
 .form-floating>.form-control::-moz-placeholder,
 .form-floating>.form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-webkit-input-placeholder,
+.form-floating>.form-control-plaintext::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-moz-placeholder,
+.form-floating>.form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-ms-input-placeholder,
+.form-floating>.form-control-plaintext::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-webkit-input-placeholder,
+.form-floating>.form-control-plaintext::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-moz-placeholder,
+.form-floating>.form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-ms-input-placeholder,
+.form-floating>.form-control-plaintext::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-webkit-input-placeholder,
+.form-floating>.form-control-plaintext::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-moz-placeholder,
+.form-floating>.form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-ms-input-placeholder,
+.form-floating>.form-control-plaintext::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-webkit-input-placeholder,
+.form-floating>.form-control-plaintext::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-moz-placeholder,
+.form-floating>.form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-ms-input-placeholder,
+.form-floating>.form-control-plaintext::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-webkit-input-placeholder,
+.form-floating>.form-control-plaintext::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-moz-placeholder,
+.form-floating>.form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-ms-input-placeholder,
+.form-floating>.form-control-plaintext::-ms-input-placeholder {
   color: transparent;
 }
 

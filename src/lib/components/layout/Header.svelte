@@ -2,10 +2,13 @@
 	import { PUBLIC_API_URL } from '$env/static/public';
 	import { title } from '$lib/components/store';
 	import naver from 'naver-id-login';
+	import Cookies from 'js-cookie';
+	import { createEventDispatcher } from 'svelte';
+	const dispatch = createEventDispatcher();
 
-	let showSideBar = false;
-	const closeSide = () => {
-		showSideBar = !showSideBar;
+	export let showSideBar = false;
+	const toggleSide = () => {
+		dispatch('toggle');
 	};
 	let headTitle = '';
 
@@ -16,7 +19,6 @@
 		const clientId = 'bRFlrYzGADivQSF_uTpM';
 		const callbackUrl = 'https://www.rushrumble.com/nlogin';
 		const auth = await naver.login(clientId, callbackUrl);
-		console.log('auth', auth);
 	};
 </script>
 
@@ -35,7 +37,7 @@
 			class="nav-item dropdown ms-3 d-flex d-lg-none align-items-center justify-content-center flex-column h-100"
 		>
 			<button
-				on:click={closeSide}
+				on:click={toggleSide}
 				class="btn nav-link sidebar-trigger-lg-down size-40 p-0 d-flex align-items-center justify-content-center"
 			>
 				<span class="material-symbols-rounded align-middle">menu</span>

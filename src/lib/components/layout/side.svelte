@@ -4,9 +4,6 @@
 	import { clickOutside } from '$lib/utils/clickOutside';
 	import { title } from '$lib/components/store';
 	let ow: number;
-	$: {
-		if (ow) showSideBar = ow < 992;
-	}
 	export let showSideBar = false;
 	const dispatch = createEventDispatcher();
 
@@ -14,11 +11,14 @@
 </script>
 
 <svelte:window bind:outerWidth={ow} />
-<div class={showSideBar ? '' : 'page-sidebar-in z-fixed'}>
+<div class={showSideBar ? 'page-sidebar-in z-fixed' : ''}>
 	<aside
 		class="page-sidebar"
 		use:clickOutside={() => {
-			if (!showSideBar) dispatch('close');
+			if (showSideBar) {
+				dispatch('close');
+				showSideBar = !showSideBar;
+			}
 		}}
 	>
 		<div class="h-100 flex-column d-flex justify-content-start">
@@ -31,7 +31,7 @@
 						<span class="sidebar-text">
 							<!--Sidebar-text-->
 							<span class="sidebar-text text-truncate fs-3 fw-bold">
-								<img src="/imgs/white_logo.png" alt="" class="w-100"><i class="fa-solid fa-circle-dot" />
+								RushRumble<i class="fa-solid fa-circle-dot" />
 							</span>
 						</span>
 					</div>

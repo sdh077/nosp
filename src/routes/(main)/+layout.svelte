@@ -5,7 +5,7 @@
 	import { title } from '$lib/components/store';
 
 	let showSideBar = false;
-	const closeSide = () => {
+	const toggleide = () => {
 		showSideBar = !showSideBar;
 	};
 	export let data;
@@ -19,9 +19,9 @@
 <body>
 	<div class="d-flex flex-column flex-root">
 		<div class="page d-flex flex-row flex-column-fluid">
-			<Side on:close={closeSide} {showSideBar} navs={data.leagues ?? []} />
+			<Side on:close={toggleide} {showSideBar} navs={data.leagues ?? []} />
 			<main class="page-content d-flex flex-column flex-row-fluid">
-				<Header />
+				<Header on:toggle={toggleide} {showSideBar} />
 				<slot />
 				<Footer />
 			</main>
