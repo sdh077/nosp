@@ -1,5 +1,5 @@
 <script>
-	import { PUBLIC_API_URL } from '$env/static/public';
+	import { PUBLIC_NCLIENT_ID, PUBLIC_NCLIENT_CALLBACK } from '$env/static/public';
 	import { title } from '$lib/components/store';
 	import naver from 'naver-id-login';
 	import Cookies from 'js-cookie';
@@ -16,9 +16,10 @@
 		headTitle = value;
 	});
 	const loginNaver = async () => {
-		const clientId = 'bRFlrYzGADivQSF_uTpM';
-		const callbackUrl = 'https://www.rushrumble.com/nlogin';
+		const clientId = PUBLIC_NCLIENT_ID;
+		const callbackUrl = PUBLIC_NCLIENT_CALLBACK;
 		const auth = await naver.login(clientId, callbackUrl);
+		console.log(auth.access_token);
 	};
 </script>
 

@@ -8,7 +8,7 @@
 	export let altThumb = false;
 	export let animations = true;
 
-	let title = 'asd';
+	let title = '스포방지';
 	let width = 0;
 	let height = 0;
 
@@ -30,15 +30,15 @@
 
 <div class="you__tube" style="--aspect-ratio:{width / height || '16/9'}" {title}>
 	{#if play}
-		<Iframe {play} {id} title={'title'} {animations} rel={0} />
+		<Iframe {play} {id} title={'스포방지'} {animations} rel={0} />
 	{:else}
 		{#if isCustomThumbnail}
 			<slot name="thumbnail" />
 		{:else}
-			<Image {id} title={'title'} {altThumb} {play} />
+			<Image {id} title={'스포방지'} {altThumb} {play} />
 		{/if}
 		<div class="b__overlay" on:click={() => (play = true)} on:keypress={() => (play = true)} />
-		<div class="v__title"><h3>{'title'}</h3></div>
+		<!-- <div class="v__title"><h3>{'스포방지'}</h3></div> -->
 	{/if}
 	{#if !play}
 		<Button on:click={() => (play = true)} {isCustomPlayButton}>
