@@ -1,5 +1,5 @@
 <script>
-	import { PUBLIC_NCLIENT_ID, PUBLIC_NCLIENT_CALLBACK } from '$env/static/public';
+	import { PUBLIC_NCLIENT_ID, PUBLIC_NCLIENT_CALLBACK, PUBLIC_API_URL } from '$env/static/public';
 	import { title } from '$lib/components/store';
 	import naver from 'naver-id-login';
 	import Cookies from 'js-cookie';
@@ -7,6 +7,8 @@
 	const dispatch = createEventDispatcher();
 
 	export let showSideBar = false;
+	const RRToken = Cookies.get('RRToken');
+	console.log(RRToken);
 	const toggleSide = () => {
 		dispatch('toggle');
 	};
@@ -15,11 +17,21 @@
 	title.subscribe((value) => {
 		headTitle = value;
 	});
+
 	const loginNaver = async () => {
 		const clientId = PUBLIC_NCLIENT_ID;
 		const callbackUrl = PUBLIC_NCLIENT_CALLBACK;
 		const auth = await naver.login(clientId, callbackUrl);
-		console.log(auth.access_token);
+		const mainAuth = await fetch(`/api/auth/`, {
+			headers: {
+				'Content-Type': 'application/json',
+				'X-Auth-Token': auth.access_token
+			}
+		})
+			.then(async (data) => await data.json())
+			.then((data) => data.data)
+			.catch((e) => console.log('e1', e));
+		Cookies.set('RRToken', mainAuth.naverToken);
 	};
 </script>
 
@@ -46,6 +58,8 @@
 		</li>
 	</ul>
 	<div>
-		<button class="btn btn-secondary active" on:click={loginNaver}>Naver Login</button>
+		{#if !RRToken}
+			<button class="btn btn-secondary active" on:click={loginNaver}>Naver Login</button>
+		{:else}로그인{/if}
 	</div>
 </header>
