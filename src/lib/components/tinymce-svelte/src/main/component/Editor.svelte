@@ -99,6 +99,8 @@
 			target: element,
 			inline: inline !== undefined ? inline : conf.inline !== undefined ? conf.inline : false,
 			readonly: disabled,
+			skin: 'oxide-dark',
+			content_css: 'dark',
 			setup: (editor: any) => {
 				editorRef = editor;
 				editor.on('init', () => {

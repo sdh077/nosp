@@ -1,24 +1,14 @@
 <script lang="ts">
 	import '$lib/assets/vendor/css/dropzone.min.css';
 	import Editor from '$lib/components/tinymce-svelte/src/main';
-	import Cookies from 'js-cookie';
 
-	let title: string;
-	let content: string;
+	export let data;
+	let title: string = data.board.data.title;
+	let content: string = data.board.data.content;
 
-	let files = {
-		accepted: [],
-		rejected: []
-	};
-
-	function handleFilesSelect(e) {
-		const { acceptedFiles, fileRejections } = e.detail;
-		files.accepted = [...files.accepted, ...acceptedFiles];
-		files.rejected = [...files.rejected, ...fileRejections];
-	}
 	const save = async () => {
-		const res = await fetch('/api/board', {
-			method: 'POST',
+		const res = await fetch(`/api/board/${data.board.data.boardId}`, {
+			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json',
 				accept: 'application/json'
@@ -45,11 +35,6 @@
 					apiKey="kudiltnf8y15o77xqowpy2fp0cuel4q66blzl4byrnzf5bgu"
 					bind:value={content}
 				/>
-				<ol>
-					{#each files.accepted as item}
-						<li>{item.name}</li>
-					{/each}
-				</ol>
 				<button class="btn btn-primary" type="submit" on:click={save}>글쓰기</button>
 			</form>
 		</div>

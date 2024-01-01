@@ -3702,19 +3702,43 @@ textarea.form-control-lg {
   color: transparent;
 }
 
-.form-floating>.form-control::-webkit-input-placeholder, .form-floating>.form-control-plaintext::-webkit-input-placeholder {
+.form-floating>.form-control::-webkit-input-placeholder,
+.form-floating>.form-control-plaintext::-webkit-input-placeholder {
   color: transparent;
 }
 
-.form-floating>.form-control::-moz-placeholder, .form-floating>.form-control-plaintext::-moz-placeholder {
+.form-floating>.form-control::-moz-placeholder,
+.form-floating>.form-control-plaintext::-moz-placeholder {
   color: transparent;
 }
 
-.form-floating>.form-control:-ms-input-placeholder, .form-floating>.form-control-plaintext:-ms-input-placeholder {
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
   color: transparent;
 }
 
-.form-floating>.form-control::-ms-input-placeholder, .form-floating>.form-control-plaintext::-ms-input-placeholder {
+.form-floating>.form-control::-ms-input-placeholder,
+.form-floating>.form-control-plaintext::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-webkit-input-placeholder,
+.form-floating>.form-control-plaintext::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-moz-placeholder,
+.form-floating>.form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-floating>.form-control::-ms-input-placeholder,
+.form-floating>.form-control-plaintext::-ms-input-placeholder {
   color: transparent;
 }
 
@@ -6112,7 +6136,8 @@ fieldset:disabled .btn {
   --bs-pagination-focus-bg: var(--bs-tertiary-bg);
   --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(88, 28, 255, 0.25);
   --bs-pagination-active-color: #fff;
-  --bs-pagination-active-bg: #fff;
+  --bs-pagination-active-bg: var(--bs-tertiary-bg);
+
   --bs-pagination-active-border-color: #fff;
   --bs-pagination-disabled-color: var(--bs-tertiary-color);
   --bs-pagination-disabled-bg: var(--bs-tertiary-bg);

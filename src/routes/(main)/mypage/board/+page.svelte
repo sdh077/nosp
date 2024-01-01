@@ -4,4 +4,4 @@
 	export let data;
 </script>
 
-<List {data} link={'/board'} />
+<List {data} link={'/mypage/board'} />

@@ -3582,19 +3582,23 @@ textarea.form-control-lg {
   color: transparent;
 }
 
-.form-floating>.form-control::-webkit-input-placeholder, .form-floating>.form-control-plaintext::-webkit-input-placeholder {
+.form-floating>.form-control::-webkit-input-placeholder,
+.form-floating>.form-control-plaintext::-webkit-input-placeholder {
   color: transparent;
 }
 
-.form-floating>.form-control::-moz-placeholder, .form-floating>.form-control-plaintext::-moz-placeholder {
+.form-floating>.form-control::-moz-placeholder,
+.form-floating>.form-control-plaintext::-moz-placeholder {
   color: transparent;
 }
 
-.form-floating>.form-control:-ms-input-placeholder, .form-floating>.form-control-plaintext:-ms-input-placeholder {
+.form-floating>.form-control:-ms-input-placeholder,
+.form-floating>.form-control-plaintext:-ms-input-placeholder {
   color: transparent;
 }
 
-.form-floating>.form-control::-ms-input-placeholder, .form-floating>.form-control-plaintext::-ms-input-placeholder {
+.form-floating>.form-control::-ms-input-placeholder,
+.form-floating>.form-control-plaintext::-ms-input-placeholder {
   color: transparent;
 }
 

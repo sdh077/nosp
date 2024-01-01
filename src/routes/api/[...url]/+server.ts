@@ -8,7 +8,7 @@ export const GET = (async ({ url, params, cookies, fetch, request }) => {
 		headers: {
 			'accept': 'application/json',
 			'Content-Type': 'application/json',
-			'X-Auth-Token': request.headers.get('x-auth-token')
+			'X-Auth-Token': cookies.get('RRToken') ?? request.headers.get('x-auth-token')
 		}
 	})
 		.then(async (data) => {
@@ -34,7 +34,7 @@ export async function POST({ request, cookies, params }) {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization: cookies.get('access_token')
+			'X-Auth-Token': cookies.get('RRToken'),
 		},
 		body: JSON.stringify(body)
 	}).then(async (data) => await data.json());
@@ -48,6 +48,7 @@ export async function PUT({ request, cookies, params }) {
 		method: 'PUT',
 		headers: {
 			'Content-Type': 'application/json',
+			'X-Auth-Token': cookies.get('RRToken'),
 			Authorization: cookies.get('access_token')
 		},
 		body: JSON.stringify(body)
