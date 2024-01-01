@@ -6,8 +6,14 @@
 	export let pageTotal = 1;
 	export let link = '';
 
-	let pageNo = 0;
-	let pages = [];
+	let pageNo = 1;
+	let pages = [
+		{ name: 1, href: `${link}?page=${1}` },
+		{ name: 2, href: `${link}?page=${2}` },
+		{ name: 3, href: `${link}?page=${3}` },
+		{ name: 4, href: `${link}?page=${4}` },
+		{ name: 5, href: `${link}?page=${5}` }
+	];
 	$: if ($page.url.searchParams.get('page')) {
 		pageNo = Number($page.url.searchParams.get('page')) || 1;
 		let pageCount = Math.floor((pageNo - 1) / 5);
