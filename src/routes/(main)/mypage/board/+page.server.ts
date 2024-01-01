@@ -3,7 +3,8 @@ import { PUBLIC_API_URL } from '$env/static/public'
 
 export const load = (async ({ cookies, fetch, url, params }) => {
     const pageNo = Number(url.searchParams.get('page') || '1')
-    const boards = await fetch(`/api/board/mine?page=${pageNo - 1}&size=2`, {
+    const size = 5
+    const boards = await fetch(`/api/board/mine?page=${pageNo - 1}&size=${size}`, {
         headers: {
             'Content-Type': 'application/json',
             'accept': 'application/json',
