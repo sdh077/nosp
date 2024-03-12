@@ -8,17 +8,14 @@
 	<div class="container-fluid px-0">
 		<div class="row">
 			<div class="col-md-10 mx-auto">
-				<div class="sticky-top z-3" style="top:68px">
-					<!--Search form-->
+				<!-- <div class="sticky-top z-3" style="top:68px">
 					<div class="pb-5">
 						<form class="position-relative">
-							<!--Icon-->
 							<span
 								class="d-flex size-20 rounded-circle ms-3 align-items-center justify-content-center position-absolute start-0 top-50 translate-middle-y"
 							>
 								<i class="material-symbols-rounded align-middle opacity-50">search</i>
 							</span>
-							<!--Input-->
 							<input
 								type="text"
 								class="form-control shadow py-4 form-control-lg ps-9"
@@ -26,11 +23,13 @@
 							/>
 						</form>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="list-group mb-4">
 					<div class="list-group-item p-4">
-						<small class="text-body-secondary">About 54 results for analytics </small>
+						<small class="text-body-secondary"
+							>About {data.boards?.data?.totalElements} results
+						</small>
 					</div>
 					{#each data.boards.data.content as board}
 						<!--Search result item-->
