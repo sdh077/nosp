@@ -55,7 +55,7 @@
 				<div class="col-lg-12">
 					<div class="card">
 						<div class="card-body">
-							{#if game.link.trim() === ''}
+							{#if game?.link?.trim() === ''}
 								스포 방지
 							{:else if game.type === 1}
 								<Youtube id={game.link} altThumb={true}>

@@ -40,7 +40,22 @@
 			<!--Sidebar-Menu-->
 			<div class="aside-menu px-3 my-auto" data-simplebar>
 				<nav class="flex-grow-1 h-100" id="page-navbar">
-					<!--:Sidebar nav-->
+					<ul class="nav flex-column collapse-group collapse d-flex">
+						<li class="nav-item sidebar-title text-truncate opacity-50 small">
+							<i class="bi bi-three-dots" />
+							<span>2024</span>
+						</li>
+						{#each navs.filter((nav) => nav.year === 2024 && nav.useYn) as nav, index}
+							<li class="nav-item">
+								<a
+									href="/league/{nav.leagueId}"
+									class="nav-link d-flex align-items-center text-truncate"
+								>
+									<span class="sidebar-text p-2">{nav.title}</span>
+								</a>
+							</li>
+						{/each}
+					</ul>
 					<ul class="nav flex-column collapse-group collapse d-flex">
 						<li class="nav-item sidebar-title text-truncate opacity-50 small">
 							<i class="bi bi-three-dots" />
