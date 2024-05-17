@@ -6,7 +6,7 @@
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
-	// export let showSideBar;
+	export let showSideBar;
 	const RRToken = Cookies.get('RRToken');
 	const toggleSide = () => {
 		dispatch('toggle');

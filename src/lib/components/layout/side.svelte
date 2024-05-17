@@ -72,6 +72,14 @@
 							</li>
 						{/each}
 					</ul>
+					<iframe
+						src="https://ads-partners.coupang.com/widgets.html?id=779275&template=carousel&trackingCode=AF4926100&subId=&width=220&height=300&tsource="
+						width="220"
+						height="300"
+						frameborder="0"
+						scrolling="no"
+						referrerpolicy="unsafe-url"
+					/>
 				</nav>
 			</div>
 		</div>
